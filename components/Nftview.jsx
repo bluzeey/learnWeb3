@@ -50,7 +50,7 @@ function Nftview({address}) {
         </Wrapper>
       ) : (
         <Wrapper>
-          <h3>You don't having any LearnWeb3 or Buildspace NFTs.</h3>
+          <h3>You do not having any LearnWeb3 or Buildspace NFTs.</h3>
         </Wrapper>
       )}
     </>
