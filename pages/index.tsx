@@ -4,6 +4,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import {useState} from 'react'
 import Nftview from '../components/Nftview'
+import { useRouter } from 'next/router'
 
 
 const Home: NextPage = () => {
