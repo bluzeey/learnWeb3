@@ -31,13 +31,14 @@ function Nftview({address}) {
     <>
       {nfts ? (
         <Wrapper>
-          {nfts.map((item) => {
+          {nfts.map((item ,index) => {
             let nft = JSON.parse(item.metadata);
             console.log(nft);
             return (
-              <NftItem>
+              <NftItem key={index}>
                 <Image
                   src={nft.image.replace("ipfs://", "https://ipfs.io/ipfs/")}
+                  alt="NFT Image"
                 />
                 <Body>
                 <p>{nft.name}</p>
