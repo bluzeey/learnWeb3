@@ -26,10 +26,10 @@ function Nftview({address}) {
         .catch((err) => console.error(err));
     }
     getNFTs();
-  }, []);
+  }, [address]);
   return (
-    <>
-      {nfts ? (
+    <d>
+      {nfts?.length ? (
         <Wrapper>
           {nfts.map((item ,index) => {
             let nft = JSON.parse(item.metadata);
@@ -49,11 +49,13 @@ function Nftview({address}) {
           })}
         </Wrapper>
       ) : (
+        <div>
         <Wrapper>
           <h3>You do not having any LearnWeb3 or Buildspace NFTs.</h3>
         </Wrapper>
+        </div>
       )}
-    </>
+    </d>
   );
 }
 
